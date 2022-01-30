@@ -84,12 +84,20 @@ a:hover{
 共通
 =====================*/
 
+section {
+  padding: 100px 0 120px;
+  @include mq('sp'){
+    padding: 50px 0 60px;
+  }
+}
+
 .section-title {
   text-align: center;
   font-size: 48px;
   padding-bottom: 14px;
   font-weight: bold;
   position: relative;
+  margin-bottom: 108px;
   &::after{
     content: "";
     position: absolute;
@@ -279,10 +287,6 @@ Card
 
 .card {
   background: #EFEFEF;
-  padding: 85px 0 120px;
-  @include mq('sp'){
-    padding: 50px 0 60px;
-  }
 }
 
 .card__inner {
@@ -296,7 +300,6 @@ Card
 .card__items{
   display: flex;
   flex-wrap: wrap;
-  margin-top: 80px;
 }
 
 
@@ -363,11 +366,7 @@ News
 =================*/
 
 .news {
-  padding: 100px 0 120px;
   background: #fff;
-  @include mq('sp'){
-    padding: 50px 0 60px;
-  }
 }
 
 .news__inner {
@@ -381,7 +380,7 @@ News
 .news__content {
   width: 800px;
   max-width: 100%;
-  margin: 80px auto 0;
+  margin: 0 auto;
 }
 
 .news__notice {
@@ -461,6 +460,205 @@ News
       height: 11px;
       transform: translateY(-50%);
       background: url(../img/news-arrow@2x.png) no-repeat center center / contain;
+    }
+  }
+}
+
+
+/*=================
+Price
+=================*/
+
+.price {
+  background: #EFEFEF;
+}
+
+.price__inner {
+
+}
+
+.price__head {
+
+}
+
+.price__content {
+  display: flex;
+
+  @include mq('sp'){
+    display: block;
+  }
+}
+
+.price__image {
+  width: 454 / 1200 * 100%;
+  
+  img {
+    height: 286px;
+  }
+
+  @include mq ('sp'){
+    text-align: center;
+    width: 100%;
+  }
+}
+
+.price__table {
+  width: (172 + 268 + 268 ) / 1200 * 100%;
+  margin-left: auto;
+
+  @include mq ('sp'){
+    width: 100%;
+    margin-top: 40px;
+  }
+}
+
+.table {
+  border-collapse: collapse;
+  border: 1px solid #707070;
+  background: #fff;
+  font-weight: bold;
+  width: 100%;
+  table-layout: fixed;
+
+  th,td {
+    border: 1px solid #707070;
+    height: 58px;
+    vertical-align: middle;
+  }
+
+  tr {
+    width: 172px;
+  }
+
+  th{
+    color: #FFF;
+    background: #999999;
+    &:first-child{
+      width: 172px;
+    }
+  }
+
+  td {
+    text-align: right;
+    padding-right: 23px;
+    color: #333333;
+  }
+
+  strong {
+    color: #E81919;
+  }
+
+  span {
+    font-size: 14px;
+    display: block;
+  }
+}
+
+.price__info {
+  font-size: 14px;
+  margin-top: 12px;
+  a{
+    font-weight: bold;
+  }
+  @include mq ('sp'){
+    text-align: center;
+  }
+}
+
+
+
+
+/*===============
+Access
+=================*/
+
+.access {
+  background: #FFFFFF;
+}
+
+.access__inner {
+  width: 800px;
+  max-width: 100%;
+}
+
+.access__head {
+
+}
+
+.access__content {
+
+}
+
+.access__iframe {
+  position: relative;
+  width: 100%;
+  padding-top: (400 / 800) * 100%;
+    > iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.access__address {
+  
+}
+
+.access__nav{
+  display: flex;
+  margin-top: 16px;
+}
+
+.access__info {
+  width: 64px;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.access__text {
+  margin-left: 40px;
+  font-size: 16px;
+}
+
+.access__btn {
+  margin-top: 94px;
+  text-align: center;
+
+  a {
+    display: inline-block;
+    width: 304px;
+    max-width: 100%;
+    height: 56px;
+    line-height: 56px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    background: $color-main;
+    border-radius: 8px;
+    box-shadow: #333333;
+    text-decoration: none;
+
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 7px;
+      height: 11px;
+      right: 12px;
+      background: url(../img/news-arrow@2x.png) no-repeat center center / contain;
+    }
+  
+    @include mq('sp'){
+      width: 300px;
+      height: 60px;
+      line-height: 60px;
+      font-size: 24px;
     }
   }
 }
