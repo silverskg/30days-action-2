@@ -935,3 +935,108 @@ Contact
     border: none;
   }
 }
+
+
+/*=================
+footer
+=================*/
+
+.footer {
+  background: linear-gradient(to bottom, #666666 ,#333333);
+}
+
+.footer__inner {
+
+}
+
+.footer__content {
+  display: flex;
+  padding: 60px 46px 40px;
+  @include mq('sp'){
+    display:  block;
+  }
+}
+
+.footer__left {
+  width: 30%;
+  @include mq('sp'){
+    text-align: center;
+    width: 100%;
+  }
+}
+
+.footer__logo {
+  width: 205px;
+
+  @include mq('sp'){
+    width: 180px;
+    margin: 0 auto;
+  }
+
+  img {
+    display: block;
+  }
+}
+
+.footer__address {
+  margin-top: 32px;
+  color: #fff;
+}
+
+.footer__tel{
+  margin-top: 14px;
+  color: #fff;
+}
+
+.footer__center {
+  width: 50%;
+  @include mq('sp'){
+    width: 100%;
+  }
+}
+
+.footer__nav{
+  display: flex;
+  align-items: center;
+  
+  @include mq('sp'){
+    margin-top: 30px;
+  }
+  li {
+    width: 100%;
+    &:not(:first-child){
+      margin-left: 40px;
+    }
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+}
+
+.footer__right {
+  width: 20%;
+  @include mq('sp'){
+    width: 100%;
+  }
+}
+
+.footer__sns {
+  display: flex;
+  align-items: center;
+  @include mq('sp'){
+    margin: 0 auto;
+  }
+
+  li {
+    width: 30px;
+    &:not(:first-child){
+      margin-left: 16px;
+    }
+  }
+}
+
+.footer__copy {
+  text-align: center;
+  color: #fff;
+}
